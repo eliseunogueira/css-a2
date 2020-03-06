@@ -1,13 +1,21 @@
 /**Student Eliseu Nogueira*/
+/*Check the comments below for the final assignment*/
 * {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
 }
+html {
+  background-color: #7f8c8d;
+}
 body {
-  margin: 20px;
-  padding: 10px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility !important;
+  text-rendering: geometricPrecision !important;
+  -moz-font-smoothing: antialiased !important;
+  -webkit-font-smoothing: antialiased !important;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 header {
   background-color: #6f6;
@@ -49,6 +57,7 @@ nav > a {
   background-color: #ecf0f1;
   color: blue;
   opacity: 1;
+  box-shadow: -1px 0px 26px -1px #28f;
 }
 .left {
   background-color: #3498db;
@@ -70,14 +79,106 @@ aside img {
   width: 74vw;
   right: 20px;
 }
+section {
+  color: #ecf0f1;
+}
 
 section h2,
 p,
-table,
 ul {
   margin-left: 5px;
   margin-bottom: 15px;
 }
 ul > li {
   margin-left: 20px;
+}
+/*Is the table element styled?
+1) The table should be styled using at least four properties
+*/
+table {
+  font-weight: 500;
+  width: 79%;
+  line-height: 30px;
+  margin: 0 auto;
+  color: #06425c;
+}
+/*Are the table headings properly styled?
+2) The table headings should have a border, background color, and at least one other property.
+  check (Are ONLY the corners of the table styled?)
+*/
+table th {
+  background: rgb(20, 8, 208);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(20, 8, 208, 0.5214460784313726) 2%,
+    rgba(9, 121, 43, 0.1825105042016807) 27%,
+    rgba(0, 255, 205, 0.7819502801120448) 84%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(20, 8, 208, 0.5214460784313726) 2%,
+    rgba(9, 121, 43, 0.1825105042016807) 27%,
+    rgba(0, 255, 205, 0.7819502801120448) 84%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(20, 8, 208, 0.5214460784313726) 2%,
+    rgba(9, 121, 43, 0.1825105042016807) 27%,
+    rgba(0, 255, 205, 0.7819502801120448) 84%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1408d0",endColorstr="#00ffcd",GradientType=1);
+}
+th {
+  font-size: 115%;
+  color: #ecf0f1;
+  border-style: solid;
+  border-bottom-width: thick;
+}
+/**
+** Are ONLY the corners of the table styled?
+**   Top right and left  **/
+th:last-child {
+  border-radius: 0 10px 0 0;
+  -webkit-border-radius: 0 10px 0 0;
+}
+
+th:first-child {
+  border-radius: 10px 0 0 0;
+  -webkit-border-radius: 10px 0 0 0;
+}
+/*Does the opacity of a table row change when it is hovered over?
+4) Set the opacity of the table rows to a value between .6 and .8 (make sure it is still visible)
+*/
+tr {
+  opacity: 0.8;
+  background-color: #28f;
+}
+/*5) Change the opacity of a row when it is hovered over*/
+tr:hover {
+  opacity: 1;
+}
+tr td {
+  background-color: #0ea333;
+}
+/*3) Style the table so that the text in the first column is left-aligned and the text in the other two columns is centered*/
+tbody {
+  text-align: center;
+}
+tbody > tr > th:first-child {
+  padding-left: 5px;
+  text-align: left;
+}
+tbody tr td:nth-child(1) {
+  text-align: left;
+}
+/*6) The table elements < td > should be styled using at least four properties
+*** on video she ask to add border-radius 2px
+*/
+tbody td {
+  color: #34495e;
+  font-style: oblique;
+  padding: 5px;
+  border: 2px solid #3498db;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
 }
